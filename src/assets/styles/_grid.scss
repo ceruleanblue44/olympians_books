@@ -1,0 +1,111 @@
+// --------------------
+// Breakpoints
+// --------------------
+$xs: 320px;
+$md: 768px;
+$lg: 1440px;
+
+// --------------------
+// Gaps
+// --------------------
+$gap-mobile: 10px;
+$gap-desktop: 20px;
+
+// --------------------
+// Grid container
+// --------------------
+.container {
+	width: 100%;
+	max-width: 1440px;
+	padding-inline: 15px;
+	margin-inline: auto;
+
+	@media (min-width: $md) {
+		padding-inline: 34px;
+	}
+
+	@media (min-width: $lg) {
+		padding-inline: 70px;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	column-gap: $gap-mobile;
+	// row-gap: $gap-mobile;
+	width: 100%;
+	margin: 0 auto;
+
+	@media (min-width: $md) {
+		column-gap: $gap-desktop;
+		// row-gap: $gap-desktop;
+	}
+
+	@media (min-width: $lg) {
+		column-gap: $gap-desktop;
+		// row-gap: $gap-desktop;
+	}
+
+	&--no-gap {
+		column-gap: 0;
+	}
+}
+
+@media (max-width: $md) {
+	.order-xs-2 {
+		order: 2;
+	}
+}
+
+@media (max-width: $md) {
+	.order-md-1 {
+		order: 1;
+	}
+}
+
+// @media (min-width: $lg) {
+// 	.order-lg-1 {
+// 		order: 1;
+// 	}
+// }
+
+// --------------------
+// Base column
+// --------------------
+[class^='col-'] {
+	grid-column: span 12; // default full width
+}
+
+// --------------------
+// XS (mobile)
+// --------------------
+@media (min-width: $xs) {
+	@for $i from 1 through 12 {
+		.col-xs-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
+
+// --------------------
+// MD (tablet)
+// --------------------
+@media (min-width: $md) {
+	@for $i from 1 through 12 {
+		.col-md-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
+
+// --------------------
+// LG (desktop)
+// --------------------
+@media (min-width: $lg) {
+	@for $i from 1 through 12 {
+		.col-lg-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
