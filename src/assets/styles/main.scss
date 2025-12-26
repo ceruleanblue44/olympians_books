@@ -4,45 +4,45 @@
 @use './base' as *;
 @use './grid' as *;
 
-button {
+.button {
 	font-family: Forum;
-	font-size: 42px;
-	line-height: 54px;
 	text-transform: uppercase;
 	border: 3px solid $color-white;
 	display: inline-block;
-	padding: 8px 42px;
+	padding: 11px 2px;
 	background-color: transparent;
 	letter-spacing: 3px;
 	color: inherit;
-	transition: background-color .3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 
-	@media screen and (max-width: 768px) {
+	@media (min-width: $md) {
 		font-size: 24px;
+		line-height: 36px;
 		padding: 10px 4px;
-		line-height: 1;
 	}
 
-	@media screen and (max-width: 400px) {
-		padding: 11px 2px;
+	@media (min-width: $lg) {
+		font-size: 42px;
+		line-height: 54px;
+		padding: 8px 42px;
 	}
 
 	&:hover {
 		outline: none;
-		background-color: #cdcdcd;
+		background-color: $color-gray-light;
 	}
 
 	&:active {
 		outline: none;
-		color: var(--black);
-		background: var(--white);
+		color: $color-black;
+		background: $color-white;
 	}
 	&:focus-visible {
 		outline: none;
 	}
 	&[disabled] {
-		color: var(--grey);
-		border-color: var(--grey);
+		color: $color-gray;
+		border-color: $color-gray;
 		&:hover {
 			background-color: transparent;
 		}
@@ -55,7 +55,7 @@ button {
 		&:hover,
 		&:active {
 			outline: none;
-			color: var(--grey);
+			color: $color-gray;
 			background-color: transparent;
 		}
 		@media screen and (max-width: 1024px) {
@@ -67,28 +67,27 @@ button {
 	}
 }
 
+// .book-card {
+// 	border: 1px solid #eee;
+// 	padding: 24px;
+// 	height: 100%;
 
-.book-card {
-	border: 1px solid #eee;
-	padding: 24px;
-	height: 100%;
+// 	&__title {
+// 		font-size: 18px;
+// 		margin-bottom: 12px;
+// 	}
 
-	&__title {
-		font-size: 18px;
-		margin-bottom: 12px;
-	}
+// 	&__genre {
+// 		color: $color-gray;
+// 		margin-bottom: 16px;
+// 	}
 
-	&__genre {
-		color: $color-gray;
-		margin-bottom: 16px;
-	}
-
-	&__footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-}
+// 	&__footer {
+// 		display: flex;
+// 		justify-content: space-between;
+// 		align-items: center;
+// 	}
+// }
 
 .about,
 .harmony {

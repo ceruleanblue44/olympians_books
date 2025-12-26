@@ -10,7 +10,7 @@ import Header from './Header.vue'
 				<h1 class="">Книги, которые вознесут вас на Олимп</h1>
 			</div>
 			<div class="col-12">
-				<button class="hero__button">Узнать больше</button>
+				<button class="button hero__button">Узнать больше</button>
 			</div>
 		</div>
 	</section>

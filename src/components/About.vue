@@ -3,7 +3,7 @@
 		<div class="grid grid--no-gap about__row">
 			<div class="col-lg-6 col-md-6 col-xs-12 order-xs-2">
 				<div class="about__img">
-					<img src="../assets/images/book.png" alt="" />
+					<img src="../assets/images/book.webp" alt="" />
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-xs-12">
@@ -35,7 +35,7 @@
 			</div>
 			<div class="col-lg-6 col-md-6 col-xs-12">
 				<div class="about__img">
-					<img src="../assets/images/bust.png" alt="" />
+					<img src="../assets/images/bust.webp" alt="" />
 				</div>
 			</div>
 		</div>
@@ -47,6 +47,16 @@
 @use '@/assets/styles/grid' as *;
 
 .about {
+	margin-bottom: 70px;	
+
+	@media (min-width: $md) {
+		margin-bottom: 90px;
+	}
+
+	@media (min-width: $lg) {
+		margin-bottom: 140px;
+	}
+
 	&__img {
 		display: flex;
 		justify-content: center;

@@ -14,10 +14,14 @@
           class="newsletter__input"
           placeholder="Email"
         />
-        <button class="newsletter__button btn btn-dark">
+        <button class="button newsletter__button btn btn-dark">
           Отправить
         </button>
       </form>
     </div>
   </section>
 </template>
+
+<style scoped lang="scss">
+	
+</style>
