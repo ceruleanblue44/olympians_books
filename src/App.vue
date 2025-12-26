@@ -5,6 +5,7 @@ import BookSlider from '@/components/BookSlider.vue'
 import About from '@/components/About.vue'
 // import Harmony from '@/components/Harmony.vue'
 import Newsletter from '@/components/NewsLetter.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Newsletter from '@/components/NewsLetter.vue'
 		<About />
 		<!-- <Harmony /> -->
 		<Newsletter />
+		<Footer />
 	</div>
 </template>
 

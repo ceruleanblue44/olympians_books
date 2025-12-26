@@ -59,6 +59,12 @@ $gap-desktop: 20px;
 }
 
 @media (max-width: $md) {
+	.order-xs-3 {
+		order: 3;
+	}
+}
+
+@media (max-width: $md) {
 	.order-md-1 {
 		order: 1;
 	}

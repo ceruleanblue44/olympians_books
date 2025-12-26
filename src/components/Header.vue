@@ -34,6 +34,7 @@
 		font-family: $font-logo;
 		font-size: 10px;
 		line-height: 15px;
+		letter-spacing: 2.8px;
 		color: $color-white;
 
 		@media (min-width: $md) {

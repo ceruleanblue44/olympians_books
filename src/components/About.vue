@@ -9,14 +9,12 @@
 			<div class="col-lg-6 col-md-6 col-xs-12">
 				<div class="about__description">
 					<h2 class="about__title">О нас</h2>
-					<!-- <div class="about__text--wrapper"> -->
 					<p class="about__text text-base">
 						Книжное наследие от мыслителей Древней Греции и до людей
 						современности. Это не просто магазин, а настоящий клуб любителей
 						книги, который объединяет в своем культурном пространстве людей
 						самых разных интересов.
 					</p>
-					<!-- </div> -->
 				</div>
 			</div>
 		</div>
@@ -47,7 +45,7 @@
 @use '@/assets/styles/grid' as *;
 
 .about {
-	margin-bottom: 70px;	
+	margin-bottom: 70px;
 
 	@media (min-width: $md) {
 		margin-bottom: 90px;
@@ -60,12 +58,25 @@
 	&__img {
 		display: flex;
 		justify-content: center;
-		height: 100%;
+		height: 500px;
 		overflow: hidden;
-
+		
+		@media (min-width: $md) {
+			height: 100%;
+		}
+		
 		img {
 			max-width: unset;
-			width: 100%;
+			
+			@media (min-width: 550px) {
+				width: 100%;
+				object-fit: cover;
+			}
+			
+			@media (min-width: $md) {
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 
