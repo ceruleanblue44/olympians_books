@@ -98,7 +98,6 @@ onBeforeUnmount(() => {
 		}
 	}
 
-	/* Book Card */
 	&-card {
 		border: 3px solid $color-black;
 		padding: 25px;
@@ -232,12 +231,9 @@ onBeforeUnmount(() => {
 		justify-content: center;
 	}
 
-	/* Navigation Arrows */
 	&__arrows {
 		display: flex;
 		align-items: center;
-		// pointer-events: none;
-		/* display: none; */
 
 		button {
 		}
@@ -259,19 +255,9 @@ onBeforeUnmount(() => {
 	}
 
 	&__arrow {
-		// position: absolute;
-		// background: #fff;
-		// border: 1px solid #e0e0e0;
-		// border-radius: 50%;
-		// width: 40px;
-		// height: 40px;
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
 		cursor: pointer;
 		pointer-events: all;
 		transition: all 0.3s ease;
-		// color: #333;
 
 		&:hover {
 			border: none;
@@ -287,13 +273,8 @@ onBeforeUnmount(() => {
 		}
 	}
 
-	// &__arrow:hover {
-	// 	background: #f5f5f5;
-	// 	border-color: #333;
-	// }
 
 	&__arrow--left {
-		// left: -20px;
 		margin-right: 77px;
 
 		@media (max-width: 1000px) {
@@ -302,7 +283,6 @@ onBeforeUnmount(() => {
 	}
 
 	&__arrow--right {
-		// right: -20px;
 		margin-left: 77px;
 
 		@media (max-width: 1000px) {
@@ -329,16 +309,11 @@ onBeforeUnmount(() => {
 		width: 30px;
 		height: 30px;
 		border-radius: 50%;
-		// background: #d0d0;
 		border: 3px solid $color-black;
 		cursor: pointer;
 		padding: 0;
 		transition: all 0.3s ease;
 	}
-
-	// &__bullet:hover {
-	// 	background: #a0a0a0;
-	// }
 
 	&__bullet--active {
 		background-color: $color-black;

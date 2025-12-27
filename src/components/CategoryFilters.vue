@@ -6,7 +6,7 @@ defineProps({
 	},
 	activeCategory: {
 		type: String,
-		default: 'all',
+		default: null,
 	},
 })
 

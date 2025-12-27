@@ -61,10 +61,5 @@ function closeModal() {
 	position: absolute;
 	top: 30px;
 	right: 30px;
-	// border: none;
-	// background: transparent;
-	// font-size: 24px;
-	// cursor: pointer;
-	// line-height: 1;
 }
 </style>
