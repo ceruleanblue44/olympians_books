@@ -26,7 +26,7 @@ const cartStore = useCartStore()
 		color: white;
 		border-radius: 50%;
 		font-size: 12px;
-		padding: 2px 6px 5px;
+		padding: 4px 7px;
 		line-height: 1;
 	}
 }

@@ -43,7 +43,7 @@ function decrement() {
 		</div>
 
 		<button class="cart-item__remove" @click="removeItem">
-			<IconRemove class="" />
+			<IconRemove />
 		</button>
 	</div>
 </template>

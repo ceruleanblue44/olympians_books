@@ -12,9 +12,17 @@
 			</div>
 			<div class="col-lg-6 col-md-6 col-xs-6">
 				<nav class="footer__nav">
-					<a class="footer__nav-link text-base">Главная</a>
-					<a class="footer__nav-link text-base">Каталог</a>
-					<a class="footer__nav-link text-base">Корзина</a>
+					<router-link :to="{ name: 'home' }" class="footer__nav-link text-base"
+						>Главная</router-link
+					>
+					<router-link
+						:to="{ name: 'library' }"
+						class="footer__nav-link text-base"
+						>Каталог</router-link
+					>
+					<router-link :to="{ name: 'cart' }" class="footer__nav-link text-base"
+						>Корзина</router-link
+					>
 				</nav>
 			</div>
 		</footer>
@@ -26,7 +34,6 @@
 @use '@/assets/styles/grid' as *;
 
 .footer {
-	
 	&-wrapper {
 		margin-top: auto;
 		width: 100%;

@@ -1,10 +1,18 @@
 <script setup>
+import { ref } from 'vue'
 import { useCartStore } from '@/stores/cart'
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import CartItem from '@/components/CartItem.vue'
+import ThanksModal from '@/components/ThanksModal.vue'
 
 const cartStore = useCartStore()
+const showThanks = ref(false)
+
+const handleOrder = () => {
+	showThanks.value = true
+	cartStore.clearCart()
+}
 </script>
 
 <template>
@@ -39,9 +47,12 @@ const cartStore = useCartStore()
 			</div>
 
 			<div class="button-order">
-				<button class="button">Оформить заказ</button>
+				<button class="button" @click="handleOrder">Оформить заказ</button>
 			</div>
 		</div>
+
+		<ThanksModal v-if="showThanks" @close="showThanks = false" />
+
 		<Footer />
 	</div>
 </template>

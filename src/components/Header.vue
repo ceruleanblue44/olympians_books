@@ -22,10 +22,6 @@ const showMenu = ref(false)
 			<a class="header__menu" @click="showMenu = true">
 				<IconOpen :class="showMenu ? 'rotate' : ''" />
 			</a>
-			<!-- <a class="header__cart">
-				<img src="../assets/icons/menu-cart.svg"
-					 alt="menu" />
-			</a> -->
 			<router-link :to="{ name: 'cart' }">
 				<CartIcon />
 			</router-link>

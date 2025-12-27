@@ -31,9 +31,6 @@ onBeforeUnmount(() => {
 		<button class="icon open" @click="hide">
 			<IconOpen :class="rotate ? 'rotate' : ''" />
 		</button>
-		<!-- <a>Главная</a> -->
-		<!-- <a>Каталог</a> -->
-		<!-- <a>Корзина</a> -->
 		<router-link :to="{ name: 'home' }">Главная</router-link>
 		<router-link :to="{ name: 'library' }">Каталог</router-link>
 		<router-link :to="{ name: 'cart' }">Корзина</router-link>
