@@ -1,17 +1,36 @@
-<script setup></script>
+<script setup>
+import HeaderMenu from './HeaderMenu.vue'
+import { ref } from 'vue'
+import IconOpen from './icons/IconOpen.vue'
+
+const showMenu = ref(false)
+
+function handleClick(e) {
+	// console.log(e.target.closest());
+	if (!e.target.closest('.header') && !e.target.closest('.open')) {
+		showMenu.value = false
+	}
+}
+</script>
 
 <template>
-	<header class="container header">
+	<header
+		class="container header"
+		@keyup.esc="showMenu = false"
+		@click="handleClick">
+		<Transition>
+			<HeaderMenu v-if="showMenu" @close="showMenu = false" />
+		</Transition>
 		<div class="header__logo">
 			Olympians<br />
 			books
 		</div>
-		<div class="header__menu">
-			<img src="../assets/icons/menu-closed.svg" alt="menu" />
-		</div>
-		<div class="header__cart">
+		<a class="header__menu" @click="showMenu = true">
+			<IconOpen :class="showMenu ? 'rotate' : ''" />
+		</a>
+		<a class="header__cart">
 			<img src="../assets/icons/menu-cart.svg" alt="menu" />
-		</div>
+		</a>
 	</header>
 </template>
 
@@ -20,6 +39,7 @@
 @use '@/assets/styles/grid' as *;
 
 .header {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -28,6 +48,18 @@
 
 	@media (min-width: $lg) {
 		padding-block: 14px;
+	}
+
+	&__menu {
+		position: absolute;
+		left: calc(50% - 32px);
+		cursor: pointer;
+		transition: color 0.3s ease-in-out;
+
+		&:hover,
+		&:active {
+			color: $color-gray;
+		}
 	}
 
 	&__logo {
@@ -44,6 +76,26 @@
 		@media (min-width: $lg) {
 			font-size: 24px;
 			line-height: 36px;
+		}
+	}
+
+	.v-enter-active {
+		animation: show 1s reverse;
+	}
+
+	.v-leave-active {
+		animation: show 1s;
+	}
+
+	@keyframes show {
+		0% {
+			transform: translateY(0);
+		}
+		20% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(-800px);
 		}
 	}
 }

@@ -1,37 +1,17 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import BookCard from '@/components/BookCard.vue'
 import Glide from '@glidejs/glide'
 import '@glidejs/glide/dist/css/glide.core.min.css'
 
-// defineProps({
-// 	books: Array,
-// })
+defineProps({
+	books: {
+		type: Array,
+		required: true,
+	},
+})
 
-defineEmits(['buy'])
-
-const books = [
-	{
-		id: 1,
-		src: 'src/assets/images/books/1.webp',
-		title: 'Ж. Верн, “Двадцать тысяч лье под водой”',
-		genre: 'Приключения',
-		price: '168',
-	},
-	{
-		id: 2,
-		src: 'src/assets/images/books/2.webp',
-		title: 'Н. Кун, “Легенды и мифы Древней Греции”',
-		genre: 'Эпос и фольклор',
-		price: '174',
-	},
-	{
-		id: 3,
-		src: 'src/assets/images/books/3.webp',
-		title: 'Гомер, “Илиада”',
-		genre: 'Эпос и фольклор',
-		price: '155',
-	},
-]
+const emit = defineEmits(['buy'])
 
 const glideElement = ref(null)
 let glideInstance = null
@@ -60,29 +40,8 @@ onBeforeUnmount(() => {
 				<div class="glide__track" data-glide-el="track">
 					<ul class="glide__slides">
 						<li v-for="book in books" :key="book.id" class="glide__slide">
-							<div class="book-card">
-								<div class="book-card__cover-image">
-									<img :src="book.src" :alt="book.title" />
-								</div>
-								<div class="book-card__description">
-									<p class="book-card__title text-base text-center">
-										{{ book.title }}
-									</p>
-									<p class="book-card__genre text-s text-center">
-										{{ book.genre }}
-									</p>
-								</div>
-								<div class="book-card__footer">
-									<div class="book-card__price text-base">
-										{{ book.price }} р.
-									</div>
-									<button
-										class="button book-card__btn"
-										@click="$emit('buy', book)">
-										КУПИТЬ
-									</button>
-								</div>
-							</div>
+							<!-- <BookCard :book="book" /> -->
+							<BookCard :book="book"  @buy="emit('buy', $event)" />
 						</li>
 					</ul>
 				</div>

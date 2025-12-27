@@ -1,0 +1,89 @@
+export const books = [
+	{
+		id: 1,
+		src: 'src/assets/images/books/1.webp',
+		title: 'Ж. Верн, “Двадцать тысяч лье под водой”',
+		genre: 'Приключения',
+		price: '168',
+	},
+	{
+		id: 2,
+		src: 'src/assets/images/books/2.webp',
+		title: 'Н. Кун, “Легенды и мифы Древней Греции”',
+		genre: 'Эпос и фольклор',
+		price: '174',
+	},
+	{
+		id: 3,
+		src: 'src/assets/images/books/3.webp',
+		title: 'Гомер, “Илиада”',
+		genre: 'Эпос и фольклор',
+		price: '155',
+	},
+]
+
+export const library = [
+	{
+		id: 1,
+		src: 'src/assets/images/books/1.webp',
+		title: 'Ж. Верн, “Двадцать тысяч лье под водой”',
+		genre: 'Приключения',
+		price: '168',
+	},
+	{
+		id: 2,
+		src: 'src/assets/images/books/2.webp',
+		title: 'Н. Кун, “Легенды и мифы Древней Греции”',
+		genre: 'Эпос и фольклор',
+		price: '174',
+	},
+	{
+		id: 3,
+		src: 'src/assets/images/books/3.webp',
+		title: 'Гомер, “Илиада”',
+		genre: 'Эпос и фольклор',
+		price: '155',
+	},
+	{
+		id: 4,
+		src: 'src/assets/images/books/3.webp',
+		title: 'Д. Алигьери, “Божественная комедия”',
+		genre: 'Классика',
+		price: '153',
+	},
+	{
+		id: 5,
+		src: 'src/assets/images/books/3.webp',
+		title: 'В. Гюго, “Собор Парижской Богоматери”',
+		genre: 'Классика',
+		price: '172',
+	},
+	{
+		id: 6,
+		src: 'src/assets/images/books/3.webp',
+		title: 'М. Булгаков, “Мастер и Маргарита”',
+		genre: 'Классика',
+		price: '174',
+	},
+	{
+		id: 7,
+		src: 'src/assets/images/books/3.webp',
+		title: 'Р. Брэдбери, “Вино из одуванчиков”',
+		genre: 'Современная проза',
+		price: '249',
+	},
+	{
+		id: 8,
+		src: 'src/assets/images/books/3.webp',
+		title: 'Л. Кэрролл, “Алиса в Стране чудес и в Зазеркалье”',
+		genre: 'Сказки',
+		price: '157',
+	},
+	{
+		id: 9,
+		src: 'src/assets/images/books/3.webp',
+		title: 'Д. Дефо, “Робинзон Крузо”',
+		genre: 'Приключения',
+		price: '146',
+	},
+]
