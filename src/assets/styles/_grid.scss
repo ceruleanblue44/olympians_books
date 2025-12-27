@@ -50,6 +50,18 @@ $gap-desktop: 20px;
 	&--no-gap {
 		column-gap: 0;
 	}
+
+	&--row-gap {
+		row-gap: $gap-mobile;
+		
+		@media (min-width: $md) {
+			row-gap: $gap-desktop;
+		}
+
+		@media (min-width: $lg) {
+			row-gap: $gap-desktop;
+		}
+	}
 }
 
 @media (max-width: $md) {

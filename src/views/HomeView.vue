@@ -5,9 +5,12 @@ import About from '@/components/About.vue'
 import Newsletter from '@/components/NewsLetter.vue'
 import Footer from '@/components/Footer.vue'
 import { useCartStore } from '@/stores/cart'
-import { books } from '../data/books'
+import { library } from '../data/library'
 
 const cartStore = useCartStore()
+
+const books = library.slice(0, 3)
+
 </script>
 
 <template>

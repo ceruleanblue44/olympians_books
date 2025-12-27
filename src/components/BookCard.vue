@@ -45,13 +45,17 @@ const emit = defineEmits(['buy'])
 		display: flex;
 		flex-direction: column;
 		width: 290px;
+		height: 500px;
+		margin: auto;
 
 		@media (min-width: $md) {
 			width: 340px;
+			height: 585px;
 		}
 
 		@media (min-width: $lg) {
 			width: 420px;
+			height: 650px;
 		}
 
 		&__cover-image {

@@ -34,7 +34,7 @@ onBeforeUnmount(() => {
 
 <template>
 	<div class="container">
-		<h2 class="book-slider__title">Горячие новинки</h2>
+		<h2 class="section-title">Горячие новинки</h2>
 		<div class="book-slider">
 			<div class="glide" ref="glideElement">
 				<div class="glide__track" data-glide-el="track">
