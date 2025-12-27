@@ -26,7 +26,9 @@
 @use '@/assets/styles/grid' as *;
 
 .footer {
+	
 	&-wrapper {
+		margin-top: auto;
 		width: 100%;
 		background-color: $color-blue;
 	}

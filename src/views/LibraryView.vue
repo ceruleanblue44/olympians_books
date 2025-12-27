@@ -1,5 +1,5 @@
 <script setup>
-import Hero from '@/components/Hero.vue'
+import HeroLibrary from '@/components/HeroLibrary.vue'
 import BookCard from '@/components/BookCard.vue'
 import Footer from '@/components/Footer.vue'
 import { useCartStore } from '@/stores/cart'
@@ -42,7 +42,7 @@ const cartStore = useCartStore()
 
 <template>
 	<div class="page">
-		<Hero />
+		<HeroLibrary />
 		<h2 class="section-title">Библиотека</h2>
 		<CategoryFilters
 			:categories="categories"

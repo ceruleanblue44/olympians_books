@@ -36,7 +36,7 @@ onBeforeUnmount(() => {
 		<!-- <a>Корзина</a> -->
 		<router-link :to="{ name: 'home' }">Главная</router-link>
 		<router-link :to="{ name: 'library' }">Каталог</router-link>
-		<!-- <router-link :to="{ name: 'cart' }">Корзина</router-link> -->
+		<router-link :to="{ name: 'cart' }">Корзина</router-link>
 	</nav>
 </template>
 
